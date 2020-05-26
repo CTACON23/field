@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+table{
+  border-spacing: 0;
+}
+td{
+  width:50px;
+  height: 50px;
+  border: 1px solid white;
+}
+.color{
+  background: #26d0ff;
+}
+
+.buttonRemove{
+  background: #e20000;
+  transition: 250ms ease-in-out;
+}
+.buttonAdd{
+  background: #ffeb00;
+  transition: 1s ease-in-out;
+}
+.buttonRemove td:last-child{
+  display: none;
+}
+.buttonRemove:nth-child(2) td:last-child{
+  display: table-cell !important;
+}
