@@ -38,10 +38,7 @@ function App() {
   */
   const hideButton = (e) =>{
     e.target.parentNode.childNodes[0].classList.remove(`${s.buttonRemove}`);
-    e.target.parentNode.childNodes[0].textContent = ''
     e.currentTarget.parentNode.parentNode.childNodes[0].childNodes[e.target.getAttribute('tdid')].classList.remove(`${s.buttonRemove}`);
-    e.currentTarget.parentNode.parentNode.childNodes[0].childNodes[e.target.getAttribute('tdid')].textContent = '';
-
   };
 
   // onClick events to set row/col
