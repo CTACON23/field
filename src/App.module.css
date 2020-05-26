@@ -8,18 +8,85 @@ td{
   width:50px;
   height: 50px;
   border: 1px solid white;
+  position: relative;
 }
 .color{
-  background: #26d0ff;
+  background: #4cabe3;
+}
+tr:first-child td{
+  border-bottom: 4px solid white;
+}
+td[tdid="0"]{
+  border-right: 4px solid white;
+}
+/*
+  Making outline-border
+  Start
+*/
+td[trid="1"].color{
+  box-shadow: 0 -2px 0 0  #4cabe3;
+}
+td[tdid="1"].color{
+  box-shadow: -2px 0 0 0  #4cabe3;
+}
+tr:nth-last-child(2) td.color{
+  box-shadow: 0 2px 0 0  #4cabe3;
+  z-index: 1;
+}
+tr>.color:nth-last-child(2){
+   box-shadow: 2px 0 0 0  #4cabe3 ;
+   z-index: 1;
+}
+tr:nth-last-child(2) td.color:nth-last-child(2){
+  box-shadow: 1px 1px 0 1px   #4cabe3;
+}
+tr:nth-child(2) td.color:nth-last-child(2){
+  box-shadow: 1px -1px 0 1px  #4cabe3;
+}
+tr:nth-child(2) td[tdid="1"]{
+  box-shadow: -1px -1px 0 1px  #4cabe3;
+}
+tr:nth-last-child(2) td[tdid="1"]{
+  box-shadow: -1px 1px 0 1px  #4cabe3;
+}
+/*
+  Making outline border
+  End
+*/
+tr:last-child td{
+  border-top: 4px solid white;
+}
+tr td:nth-last-child(1){
+  border-left: 4px solid white;
 }
 
+
 .buttonRemove{
-  background: #e20000;
-  transition: 250ms ease-in-out;
+  background: #af0102;
+  transition: 100ms ease-in-out;
+  cursor: pointer;
+}
+.buttonRemove:before{
+  content: "-";
+  color: white;
+  font-weight: bold;
+  font-size:1.5em;
+}
+.buttonRemove:hover{
+  background: #cb4b4c;
 }
 .buttonAdd{
-  background: #ffeb00;
-  transition: 1s ease-in-out;
+  background: #f1a514;
+  cursor: pointer;
+}
+.buttonAdd:before{
+  content: "+";
+  color: white;
+  font-weight: bold;
+  font-size:1.5em;
+}
+.buttonAdd:hover{
+  background: #f6bf5b;
 }
 .buttonRemove td:last-child{
   display: none;
