@@ -23,12 +23,18 @@ function App() {
   */
   const displayButton = (e) =>{
     // eslint-disable-next-line
-    if(e.target.getAttribute('trid') != row.length-1 && e.target.getAttribute('tdid') != col.length-1 && e.target.getAttribute('trid') != 0){
+    if(row.length != 3){
+      // eslint-disable-next-line
+      if(e.target.getAttribute('trid') != row.length-1 && e.target.getAttribute('tdid') != col.length-1 && e.target.getAttribute('trid') != 0){
         e.target.parentNode.childNodes[0].classList.add(`${s.buttonRemove}`)
+      }
     }
     // eslint-disable-next-line
-    if(e.target.getAttribute('tdid') != 0 && e.target.getAttribute('tdid') != col.length-1 && e.target.getAttribute('trid') != row.length-1){
-      e.target.parentNode.parentNode.childNodes[0].childNodes[e.target.getAttribute('tdid')].classList.add(`${s.buttonRemove}`)
+    if(col.length !=3){
+      // eslint-disable-next-line
+      if(e.target.getAttribute('tdid') != 0 && e.target.getAttribute('tdid') != col.length-1 && e.target.getAttribute('trid') != row.length-1){
+        e.target.parentNode.parentNode.childNodes[0].childNodes[e.target.getAttribute('tdid')].classList.add(`${s.buttonRemove}`)
+      }
     }
   };
 
@@ -84,7 +90,7 @@ function App() {
                         className={
                           (indextr===0 || indextd===col.length-1) && indextr!==1 ? ' ':
                         ((indextr===row.length-1 && indextd===1) || (indextr===1 && indextd===col.length-1)) ? `${s.buttonAdd}` :
-                            indextd===0 || indextr===row.length-1? ' ' :`${s.color}`
+                            indextd===0 || indextr===row.length-1? ' ' :  row.length === 3 || col.length === 3 ? `${s.one} ${s.color}` : `${s.color}`
                         }/>
                 )}
               </tr>

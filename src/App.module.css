@@ -94,3 +94,23 @@ tr td:nth-last-child(1){
 .buttonRemove:nth-child(2) td:last-child{
   display: table-cell !important;
 }
+.one.color{
+  box-shadow: 0 2px 0 0 #4cabe3, 0 -2px 0 0 #4cabe3 !important;
+  z-index: 1;
+}
+tr:nth-last-child(2) .one.color:nth-child(2){
+  box-shadow: 0 2px 0 0 #4cabe3, 0 -2px 0 0 #4cabe3,0 0 0 2px #4cabe3  !important;
+}
+tr:nth-last-child(2) .one.color:nth-last-child(2){
+  box-shadow: 0 2px 0 #4cabe3, 2px 2px 0 #4cabe3, 1px -1px 0 1px #4cabe3 !important;
+}
+tr>.one.color:nth-child(2){
+  box-shadow: 0 2px 0 2px #4cabe3  !important;
+}
+tr:nth-child(2)>.one.color:nth-child(2){
+  box-shadow: 0 0 0 2px #4cabe3 !important;
+}
+tr:nth-last-child(2)>.one.color:nth-child(2){
+  box-shadow: 2px 2px 0 #4cabe3, -2px 2px 0 #4cabe3, -2px 0 0 #4cabe3, 2px 0 0 #4cabe3 !important
+}
+
